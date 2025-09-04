@@ -38,7 +38,8 @@ print(object_column_9.unique())
 print(object_column_10.unique())
 
 # check for total null values
-print(dataset1.isnull().sum())
+
+print(f"\nNull values:\n{dataset1.isnull().sum()}\n")
 
 #  Drop all the columns with dtypes object and store in new DataFrame, also write the DataFrame in ”.csv” with name ”banknumericdata.csv”
 numeric_dataset = dataset1.drop(columns=['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'month', 'poutcome', 'y'])
